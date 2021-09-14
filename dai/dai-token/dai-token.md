@@ -185,7 +185,7 @@ and specify the content of `$chainid` as the ABI formatted constructor.
 Once deployed, you may test your contract
 
 1. `export DAIK=<deployed contract address>`
-2. `seth call $DAIK 'wards(address)' $ETH_FROM`:  Should return 1 because the adress that deployed the contract is part of wards by default.
+2. `seth call $DAIK 'wards(address)' $ETH_FROM`:  Should return 1 because the address that deployed the contract is part of wards by default.
 3. `seth send $DAIK 'mint(address,uint256)' $ETH_FROM $(seth --to-uint256 $(seth --to-wei 100000000 eth))`: Will mint yourself 100,000,000 test-DAI
 4. `seth --from-wei $(seth --to-dec $(seth call $DAIK 'balanceOf(address)' $ETH_FROM))`: To see your test-Dai balance
 
